@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode in Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-canvas: #faf8f5;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f4f0ea;
+    --text-heading: #0f172a;
+    --text-body: #1e293b;
+    --text-secondary: #334155;
+    --text-muted: #475569;
+    --border-subtle: #cbd5e1;
+    --color-primary: #194329;
+    --color-primary-hover: #12331f;
+    --color-accent: #8b5a2b;
+  }
+
+  .dark, [data-theme="dark"] {
+    --bg-canvas: #090e0b;
+    --bg-surface: #121b14;
+    --bg-surface-elevated: #1a271e;
+    --text-heading: #ffffff;
+    --text-body: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --text-muted: #cbd5e1;
+    --border-subtle: #293d2f;
+    --color-primary: #2d6a4f;
+    --color-primary-hover: #388663;
+    --color-accent: #d4a373;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-body);
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* 100% Vietnamese font rendering without jumping or shifting */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+  }
+
+  .font-serif {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .font-sans {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom button micro-interactions */
+.btn-tactile {
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-tactile:hover {
+  transform: translateY(-1px);
+}
+.btn-tactile:active {
+  transform: translateY(0.5px) scale(0.99);
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.55);
+}

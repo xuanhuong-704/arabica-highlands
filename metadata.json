@@ -1,0 +1,6 @@
+{
+  "name": "Arabica Highlands - Giải Pháp Canh Tác Cà Phê Bền Vững Chiềng Lao",
+  "description": "Nền tảng giải pháp kỹ thuật, điều kiện tự nhiên, cải tạo đất dốc, chống hạn và tối ưu lao động trồng cà phê bền vững tại xã Chiềng Lao, Mường La, Sơn La.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
